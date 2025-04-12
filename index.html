@@ -62,22 +62,36 @@
             color: var(--primary-color);
         }
 
-        /* 导航栏固定在顶部 */
+        /* 导航栏滚动时固定在顶部 */
         #nav {
+            background-color: var(--bg-color);
+            z-index: 100;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        #nav.fixed {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background-color: var(--bg-color);
-            z-index: 100;
-            padding: 1rem 0;
         }
 
         /* 为了避免内容被导航栏遮挡 */
         #main {
-            padding-top: 80px;
+            padding-top: 0;
         }
     </style>
+    <script>
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > document.getElementById('header').offsetHeight) {
+                nav.classList.add('fixed');
+            } else {
+                nav.classList.remove('fixed');
+            }
+        });
+    </script>
 </head>
 
 <body class="is-preload">
@@ -179,22 +193,22 @@
                 </header>
                 <ul class="statistics grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <li class="style1 bg-gray-800 p-8 rounded-lg shadow-sm card">
-                        <span class="icon solid fa-code-branch text-4xl mb-4 block text-center"></span>
+                        <span class="icon solid fa-arrows-rotate text-4xl mb-4 block text-center"></span>
                         <strong class="text-3xl font-bold block text-center">3</strong>
                         <p class="text-lg leading-relaxed text-center">degrees of freedom</p>
                     </li>
                     <li class="style2 bg-gray-800 p-8 rounded-lg shadow-sm card">
-                        <span class="icon solid fa-robot text-4xl mb-4 block text-center"></span>
+                        <span class="icon solid fa-expand text-4xl mb-4 block text-center"></span>
                         <strong class="text-3xl font-bold block text-center">50mm</strong>
                         <p class="text-lg leading-relaxed text-center">Maximum Angle of spread</p>
                     </li>
                     <li class="style3 bg-gray-800 p-8 rounded-lg shadow-sm card">
-                        <span class="icon solid fa-laptop text-4xl mb-4 block text-center"></span>
+                        <span class="icon solid fa-balance-scale text-4xl mb-4 block text-center"></span>
                         <strong class="text-3xl font-bold block text-center">68g</strong>
                         <p class="text-lg leading-relaxed text-center">Weight</p>
                     </li>
                     <li class="style4 bg-gray-800 p-8 rounded-lg shadow-sm card">
-                        <span class="icon solid fa-signal text-4xl mb-4 block text-center"></span>
+                        <span class="icon solid fa-stopwatch text-4xl mb-4 block text-center"></span>
                         <strong class="text-3xl font-bold block text-center">0.17sec</strong>
                         <p class="text-lg leading-relaxed text-center">Reaction rate</p>
                     </li>
@@ -241,11 +255,11 @@
                     <dd class="text-lg"><a href="#" class="text-primary-color hover:underline">vsg16@hw.ac.uk</a></dd>
                 </dl>
                 <ul class="icons flex space-x-6">
-                    <li><a href="https://x.com/w00b5qbxK896861" class="icon brands fa-twitter alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Twitter</span></a></li>
-                    <li><a href="https://facebook.com" class="icon brands fa-facebook-f alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Facebook</span></a></li>
-                    <li><a href="https://instagram.com" class="icon brands fa-instagram alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Instagram</span></a></li>
-                    <li><a href="https://github.com/G16car" class="icon brands fa-github alt text-2xl hover:text-primary-color" target="_blank"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://dribbble.com" class="icon brands fa-dribbble alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Dribbble</span></a></li>
+                    <li><a href="https://x.com/w00b5qbxK896861" class="icon brands fa-x-twitter text-2xl hover:text-primary-color" target="_blank"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://facebook.com" class="icon brands fa-facebook-f text-2xl hover:text-primary-color" target="_blank"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://instagram.com" class="icon brands fa-instagram text-2xl hover:text-primary-color" target="_blank"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/G16car" class="icon brands fa-github text-2xl hover:text-primary-color" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://dribbble.com" class="icon brands fa-dribbble text-2xl hover:text-primary-color" target="_blank"><span class="label">Dribbble</span></a></li>
                 </ul>
 
             </section>
