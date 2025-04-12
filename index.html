@@ -1,183 +1,255 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Axion Robotics</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+    <title>Axion Robotics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 自定义科技感颜色 */
+        :root {
+            --primary-color: #00f7ff;
+            --secondary-color: #003cff;
+            --bg-color: #0a192f;
+            --text-color: #e6f1ff;
+        }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1>Axion Robotics</h1>
-						<p>Intelligent Arms, Infinite Possibilities<br />
-							Web of Group 16.</p>
-					</header>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Company Introduction</a></li>
-							<li><a href="#first">Body Structure</a></li>
-							<li><a href="#second">Robotic Arm</a></li>
-							<li><a href="#cta">Get Started</a></li>
-						</ul>
-					</nav>
+        h1,
+        h2,
+        h3 {
+            color: var(--primary-color);
+        }
 
-				<!-- Main -->
-					<div id="main">
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
 
-						<!-- Company Introduction -->
-						<section id="intro" class="main">
-							<div class="spotlight">
-								<div class="content">
-									<header class="major">
-										<h2>Axion Robotics</h2>
-									</header>
-									<p>
-										Axion Robotics is an innovative company founded by a student startup team, 
-										specializing in developing smart cars equipped with robotic arms. 
-										The company combines advanced robotics technology with intelligent control systems to create smart cars 
-										with precise operational capabilities. The product has wide applications in fields such as automation, 
-										logistics, and education, providing more efficient and flexible solutions for various industries.
-									</p>
-									<ul class="actions">
-										<li><a href="sub1.html" class="button">Learn More</a></li>
-									</ul>
-								</div>
-								<span class="image"><img src="images/pic01.png" alt="" /></span>
-							</div>
-						</section>
+        .button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
 
-						<!-- Body Structure -->
-						<section id="first" class="main special">
-							<header class="major">
-								<h2>Body Structure</h2>
-							</header>
-							<ul class="features">
-								<li>
-									<span class="icon solid major style1">
-										<img src="images/pic07.png" alt="pic07" class="custom-icon">
-									</span>
-									<h3>TT two-axis motor</h3>
-									<p>Small size, light weight, high flexibility, high efficiency and low noise, suitable for low-power equipment.</p>
-								</li>
-								<li>
-									<span class="icon solid major style1">
-										<img src="images/pic08.png" alt="pic08" class="custom-icon">
-									</span>
-									<h3>60mm mecanum wheel</h3>
-									<p>High stability and durability, suitable for a variety of mobile platform applications. Compact design to provide smooth driving effect.</p>
-								</li>
-								<li>
-									<span class="icon solid major style1">
-										<img src="images/pic09.png" alt="pic09" class="custom-icon">
-									</span>
-									<h3>Arduino mega 2560 board</h3>
-									<p>Enhanced processing power and more storage space support a wide range of sensors and modules for rapid development and prototyping.</p>
-								</li>
-							</ul>
-							<footer class="major">
-								<ul class="actions special">
-									<li><a href="sub2.html" class="button">Learn More</a></li>
-								</ul>
-							</footer>
-						</section>
+        .icon {
+            color: var(--primary-color);
+        }
 
-						<!-- Robotic Arm -->
-						<section id="second" class="main special">
-							<header class="major">
-								<h2>Robotic Arm</h2>
-								<p>
-									Multi-degree of freedom precise control, durable & reliable<br />
-									Open a new realm of efficient operation
-								</p>
-							</header>
-							<ul class="statistics">
-								<li class="style1">
-									<span class="icon solid fa-code-branch"></span>
-									<strong>3</strong> degrees of freedom
-								</li>
-								<li class="style2">
-									<span class="icon solid fa-robot"></span>
-									<strong>50mm</strong> Maximum Angle of spread
-								</li>
-								<li class="style3">
-									<span class="icon solid fa-laptop"></span>
-									<strong>68g</strong> Weight
-								</li>
-								<li class="style4">
-									<span class="icon solid fa-signal"></span>
-									<strong>0.17sec</strong> Reaction rate
-								</li>
-							</ul>
-							<p class="content">
-								The manipulator adopts a multi-degree of freedom structure to achieve high precision, flexible and fast movement, and can carry a certain weight load. The algorithm combined with sensor feedback closed-loop control ensures accurate and stable operation.<br />
-								At the same time, the reasonable structure and high-quality components ensure that it is durable and reliable, and can be widely used in industrial, scientific research and other fields with high requirements for precision, efficiency and stability..
-							</p>
-							<footer class="major">
-								<ul class="actions special">
-									<li><a href="sub3.html" class="button">Learn More</a></li>
-								</ul>
-							</footer>
-						</section>
+        /* 卡片悬停效果 */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-						<!-- Get Started -->
-						<section id="cta" class="main special">
-							<header class="major">
-								<h2>Car purchase</h2>
-								<p>
-									Embark on a journey of technological discovery<br />
-									Buy a smart tracking car of your own!
-								</p>
-							</header>
-							<footer class="major">
-								<ul class="actions special">
-									<li><a href="sub4.html" class="button primary">Get Started</a></li>
-								</ul>
-							</footer>
-						</section>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 247, 255, 0.2);
+        }
 
-					</div>
+        /* 导航栏样式 */
+        nav ul li a {
+            transition: color 0.3s ease;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Company information</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>Taibai Southtern Road II &bull; Xi'an &bull; China</dd>
-								<dt>Phone</dt>
-								<dd>(016) 158-3989 x 8888</dd>
-								<dt>Email</dt>
-								<dd><a href="#">vsg16@hw.ac.uk</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://x.com/w00b5qbxK896861" class="icon brands fa-twitter alt" target="_blank"><span class="label">Twitter</span></a></li>
-								<li><a href="https://facebook.com" class="icon brands fa-facebook-f alt" target="_blank"><span class="label">Facebook</span></a></li>
-								<li><a href="https://instagram.com" class="icon brands fa-instagram alt" target="_blank"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/G16car" class="icon brands fa-github alt" target="_blank"><span class="label">GitHub</span></a></li>
-								<li><a href="https://dribbble.com" class="icon brands fa-dribbble alt" target="_blank"><span class="label">Dribbble</span></a></li>
-							</ul>
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
 
-						</section>
-					</footer>
+<body class="is-preload">
 
-			</div>
+    <!-- Wrapper -->
+    <div id="wrapper" class="container mx-auto p-8">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Header -->
+        <header id="header" class="alt text-center mb-16">
+            <h1 class="text-5xl font-bold">Axion Robotics</h1>
+            <p class="text-lg">Intelligent Arms, Infinite Possibilities<br />
+                Web of Group 16.</p>
+        </header>
 
-	</body>
-</html>
+        <!-- Nav -->
+        <nav id="nav" class="flex justify-center mb-16">
+            <ul class="flex space-x-8">
+                <li><a href="#intro" class="active text-lg">Company Introduction</a></li>
+                <li><a href="#first" class="text-lg">Body Structure</a></li>
+                <li><a href="#second" class="text-lg">Robotic Arm</a></li>
+                <li><a href="#cta" class="text-lg">Get Started</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Company Introduction -->
+            <section id="intro" class="main mb-16">
+                <div class="spotlight flex flex-col md:flex-row items-center">
+                    <div class="content flex-1 pr-8">
+                        <header class="major mb-4">
+                            <h2 class="text-4xl font-bold">Axion Robotics</h2>
+                        </header>
+                        <p class="text-lg leading-relaxed">
+                            Axion Robotics is an innovative company founded by a student startup team,
+                            specializing in developing smart cars equipped with robotic arms.
+                            The company combines advanced robotics technology with intelligent control systems to create smart cars
+                            with precise operational capabilities. The product has wide applications in fields such as automation,
+                            logistics, and education, providing more efficient and flexible solutions for various industries.
+                        </p>
+                        <ul class="actions mt-8">
+                            <li><a href="sub1.html" class="button py-3 px-6 rounded-md text-lg">Learn More</a></li>
+                        </ul>
+                    </div>
+                    <span class="image flex-1"><img src="https://picsum.photos/800/600" alt="" class="rounded-md shadow-md"></span>
+                </div>
+            </section>
+
+            <!-- Body Structure -->
+            <section id="first" class="main special mb-16 p-12 bg-gray-900 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
+                <header class="major mb-8">
+                    <h2 class="text-4xl font-bold">Body Structure</h2>
+                </header>
+                <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+                    <video width="640" height="360" controls class="mb-6 md:mb-0">
+                        <source src="your-video-file.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="640" height="360" controls class="mb-6 md:mb-0">
+                        <source src="your-second-video-file.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <ul class="features grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <li class="bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid major style1 block mb-4 text-center">
+                            <img src="images/pic07.png" alt="pic07" class="custom-icon mx-auto">
+                        </span>
+                        <h3 class="text-2xl font-bold mb-4 text-center">TT two-axis motor</h3>
+                        <p class="text-lg leading-relaxed text-center">Small size, light weight, high flexibility, high efficiency and low noise, suitable for low-power equipment.</p>
+                    </li>
+                    <li class="bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid major style1 block mb-4 text-center">
+                            <img src="images/pic08.png" alt="pic08" class="custom-icon mx-auto">
+                        </span>
+                        <h3 class="text-2xl font-bold mb-4 text-center">60mm mecanum wheel</h3>
+                        <p class="text-lg leading-relaxed text-center">High stability and durability, suitable for a variety of mobile platform applications. Compact design to provide smooth driving effect.</p>
+                    </li>
+                    <li class="bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid major style1 block mb-4 text-center">
+                            <img src="images/pic09.png" alt="pic09" class="custom-icon mx-auto">
+                        </span>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Arduino mega 2560 board</h3>
+                        <p class="text-lg leading-relaxed text-center">Enhanced processing power and more storage space support a wide range of sensors and modules for rapid development and prototyping.</p>
+                    </li>
+                </ul>
+                <footer class="major mt-12">
+                    <ul class="actions special flex justify-center">
+                        <li><a href="sub2.html" class="button py-3 px-6 rounded-md text-lg">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Robotic Arm -->
+            <section id="second" class="main special mb-16 p-12 bg-gray-900 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
+                <header class="major mb-8">
+                    <h2 class="text-4xl font-bold">Robotic Arm</h2>
+                    <p class="text-lg leading-relaxed">
+                        Multi-degree of freedom precise control, durable & reliable<br />
+                        Open a new realm of efficient operation
+                    </p>
+                </header>
+                <ul class="statistics grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <li class="style1 bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid fa-code-branch text-4xl mb-4 block text-center"></span>
+                        <strong class="text-3xl font-bold block text-center">3</strong>
+                        <p class="text-lg leading-relaxed text-center">degrees of freedom</p>
+                    </li>
+                    <li class="style2 bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid fa-robot text-4xl mb-4 block text-center"></span>
+                        <strong class="text-3xl font-bold block text-center">50mm</strong>
+                        <p class="text-lg leading-relaxed text-center">Maximum Angle of spread</p>
+                    </li>
+                    <li class="style3 bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid fa-laptop text-4xl mb-4 block text-center"></span>
+                        <strong class="text-3xl font-bold block text-center">68g</strong>
+                        <p class="text-lg leading-relaxed text-center">Weight</p>
+                    </li>
+                    <li class="style4 bg-gray-800 p-8 rounded-lg shadow-sm card">
+                        <span class="icon solid fa-signal text-4xl mb-4 block text-center"></span>
+                        <strong class="text-3xl font-bold block text-center">0.17sec</strong>
+                        <p class="text-lg leading-relaxed text-center">Reaction rate</p>
+                    </li>
+                </ul>
+                <p class="content mt-12 text-lg leading-relaxed">
+                    The manipulator adopts a multi-degree of freedom structure to achieve high precision, flexible and fast movement, and can carry a certain weight load. The algorithm combined with sensor feedback closed-loop control ensures accurate and stable operation.<br />
+                    At the same time, the reasonable structure and high-quality components ensure that it is durable and reliable, and can be widely used in industrial, scientific research and other fields with high requirements for precision, efficiency and stability.
+                </p>
+                <footer class="major mt-12">
+                    <ul class="actions special flex justify-center">
+                        <li><a href="sub3.html" class="button py-3 px-6 rounded-md text-lg">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Get Started -->
+            <section id="cta" class="main special p-12 bg-gray-900 rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-xl">
+                <header class="major mb-8">
+                    <h2 class="text-4xl font-bold">Car purchase</h2>
+                    <p class="text-lg leading-relaxed">
+                        Embark on a journey of technological discovery<br />
+                        Buy a smart tracking car of your own!
+                    </p>
+                </header>
+                <footer class="major mt-12">
+                    <ul class="actions special flex justify-center">
+                        <li><a href="sub4.html" class="button primary py-3 px-6 rounded-md text-lg">Get Started</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="mt-16">
+            <section>
+                <h2 class="text-3xl font-bold mb-4">Company information</h2>
+                <dl class="alt mb-8">
+                    <dt class="text-lg font-bold">Address</dt>
+                    <dd class="text-lg">Taibai Southtern Road II &bull; Xi'an &bull; China</dd>
+                    <dt class="text-lg font-bold">Phone</dt>
+                    <dd class="text-lg">(016) 158-3989 x 8888</dd>
+                    <dt class="text-lg font-bold">Email</dt>
+                    <dd class="text-lg"><a href="#" class="text-primary-color hover:underline">vsg16@hw.ac.uk</a></dd>
+                </dl>
+                <ul class="icons flex space-x-6">
+                    <li><a href="https://x.com/w00b5qbxK896861" class="icon brands fa-twitter alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://facebook.com" class="icon brands fa-facebook-f alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://instagram.com" class="icon brands fa-instagram alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://github.com/G16car" class="icon brands fa-github alt text-2xl hover:text-primary-color" target="_blank"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://dribbble.com" class="icon brands fa-dribbble alt text-2xl hover:text-primary-color" target="_blank"><span class="label">Dribbble</span></a></li>
+                </ul>
+
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>    
