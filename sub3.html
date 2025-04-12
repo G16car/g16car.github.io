@@ -1,68 +1,141 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-	<title>Robotic Arm</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <title>Robotic Arm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 自定义科技感颜色 */
+        :root {
+            --primary-color: #00f7ff;
+            --secondary-color: #003cff;
+            --bg-color: #0a192f;
+            --text-color: #e6f1ff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color);
+        }
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 247, 255, 0.2);
+        }
+
+        /* 图片容器样式 */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .image-container .image.main {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .image-container .image.main img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper" class="container mx-auto p-8">
 
-		<!-- Header -->
-		<header id="header">
-			<h1>Mechanical design</h1>
-			<p>From modeling to physical objects</p>
-		</header>
+        <!-- Header -->
+        <header id="header" class="text-center mb-16">
+            <h1 class="text-5xl font-bold">Mechanical design</h1>
+            <p class="text-lg">From modeling to physical objects</p>
+        </header>
 
-		<!-- Main -->
-		<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-			<!-- Content -->
-			<section id="content" class="main">
-				<div class="image-container">
-					<span class="image main"><img src="images/picsub301.png" alt="" /></span>
-					<span class="image main"><img src="images/picsub302.png" alt="" /></span>
-				</div>
-				<h2>
-					Degree of freedom</h2>
-				<p>
-					By rotating parts up and down, rotating parts left and right, etc., a multi-degree of freedom system is built to realize complex motion trajectory planning in three-dimensional space, and it can flexibly reach various positions in the work space to meet diversified operation needs.
-				</p>
+            <!-- Content -->
+            <section id="content" class="main">
+                <div class="image-container">
+                    <span class="image main"><img src="images/picsub301.png" alt="" /></span>
+                    <span class="image main"><img src="images/picsub302.png" alt="" /></span>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Degree of freedom</h2>
+                    <p class="text-lg">
+                        By rotating parts up and down, rotating parts left and right, etc., a multi-degree of freedom system is built to realize complex motion trajectory planning in three-dimensional space, and it can flexibly reach various positions in the work space to meet diversified operation needs.
+                    </p>
+                </div>
 
-				<h2>Motion accuracy</h2>
-				<p>
-					Servo-tower Pro MG995 Servo offers precise Angle control, enabling precise Angle adjustment to sub-degree levels. This enables the robot arm to control the error within a very small range when performing operations such as grasping and placing, and to meet the exacting task scenarios such as precision assembly and micro-operation.
-				</p>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Motion accuracy</h2>
+                    <p class="text-lg">
+                        Servo-tower Pro MG995 Servo offers precise Angle control, enabling precise Angle adjustment to sub-degree levels. This enables the robot arm to control the error within a very small range when performing operations such as grasping and placing, and to meet the exacting task scenarios such as precision assembly and micro-operation.
+                    </p>
+                </div>
 
-				<h2>Velocity of motion</h2>
-				<p>
-					Our robotic arm can complete the Angle switch in a short time, and combined with the lightweight structural design of the robot arm, it can achieve a higher motion speed and improve the working efficiency per unit time.
-				</p>
-			</section>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Velocity of motion</h2>
+                    <p class="text-lg">
+                        Our robotic arm can complete the Angle switch in a short time, and combined with the lightweight structural design of the robot arm, it can achieve a higher motion speed and improve the working efficiency per unit time.
+                    </p>
+                </div>
+            </section>
 
-		</div>
-		<!-- Footer -->
-		<footer id="footer">
-			<section>
-				<ul class="actions">
-					<li><a href="index.html" class="button">Back</a></li>
-				</ul>
-			</section>
+        </div>
+        <!-- Footer -->
+        <footer id="footer" class="mt-16">
+            <section>
+                <ul class="actions">
+                    <li><a href="index.html" class="button py-3 px-6 rounded-md text-lg">Back</a></li>
+                </ul>
+            </section>
+        </footer>
 
-	</div>
+    </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
-</html>
+
+</html>    
