@@ -1,68 +1,136 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>TEAM</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+<head>
+    <title>TEAM</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 自定义科技感颜色 */
+        :root {
+            --primary-color: #00f7ff;
+            --secondary-color: #003cff;
+            --bg-color: #0a192f;
+            --text-color: #e6f1ff;
+        }
 
-			<!-- Header -->
-			<header id="header">
-				<h1>TEAM</h1>
-				<p>Start-up Members</p>
-			</header>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+        }
 
-			<!-- Main -->
-			<div id="main">
+        h1,
+        h2 {
+            color: var(--primary-color);
+        }
 
-				<!-- Content -->
-				<section id="content" class="main">
-					<span class="image main"><img src="images/team.png" alt="" /></span>
-					<h2>Managing director-MD</h2>
-					<p>SHEN ZIHAN </p>
-					<h2>Company secretary-Sec</h2>
-					<p>LU AOXUE </p>
-					<h2>Chief electronics and wiring engineer-EW</h2>
-					<p>ZHANG YITENG</p>
-					<h2>Chief digital systems engineer-DE</h2>
-					<p>SONG HUMEIZI & NAN JINGJIE</p>
-					<h2>Software engineer-SE</h2>
-					<p>HAN HAOZHE & SHEN ZIHAN</p>
-					<h2>Chief public relations organiser-PR</h2>
-					<p>SONG HUMEIZI</p>
-					<h2>Chief mechanical designer-ME</h2>
-					<p>LU AOXUE & ZHANG YITENG</p>
-					<h2>Workshop engineer-WE</h2>
-					<p>HAN HAOZHE</p>
-					<h2>Web designer-WD</h2>
-					<p>NAN JINGJIE</p>
-				</section>
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
 
-			</div>
-			<!-- Footer -->
-			<footer id="footer">
-				<section>
-					<ul class="actions">
-						<li><a href="index.html" class="button">Back</a></li>
-					</ul>
-				</section>
+        .button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
 
-		</div>
+        /* 卡片样式 */
+        .card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 247, 255, 0.2);
+        }
+    </style>
+</head>
 
-	</body>
-</html>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="container mx-auto p-8">
+
+        <!-- Header -->
+        <header id="header" class="text-center mb-16">
+            <h1 class="text-5xl font-bold">TEAM</h1>
+            <p class="text-lg">Start-up Members</p>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Content -->
+            <section id="content" class="main">
+                <span class="image main"><img src="https://picsum.photos/1200/600" alt="" class="rounded-md shadow-md mb-8"></span>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Managing director-MD</h2>
+                    <p class="text-lg">SHEN ZIHAN </p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Company secretary-Sec</h2>
+                    <p class="text-lg">LU AOXUE </p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Chief electronics and wiring engineer-EW</h2>
+                    <p class="text-lg">ZHANG YITENG</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Chief digital systems engineer-DE</h2>
+                    <p class="text-lg">SONG HUMEIZI & NAN JINGJIE</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Software engineer-SE</h2>
+                    <p class="text-lg">HAN HAOZHE & SHEN ZIHAN</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Chief public relations organiser-PR</h2>
+                    <p class="text-lg">SONG HUMEIZI</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Chief mechanical designer-ME</h2>
+                    <p class="text-lg">LU AOXUE & ZHANG YITENG</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Workshop engineer-WE</h2>
+                    <p class="text-lg">HAN HAOZHE</p>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Web designer-WD</h2>
+                    <p class="text-lg">NAN JINGJIE</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="mt-16">
+            <section>
+                <ul class="actions">
+                    <li><a href="index.html" class="button py-3 px-6 rounded-md text-lg">Back</a></li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>    
