@@ -1,78 +1,152 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-	<title>Detailed Parameters</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <title>Detailed Parameters</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 自定义科技感颜色 */
+        :root {
+            --primary-color: #00f7ff;
+            --secondary-color: #003cff;
+            --bg-color: #0a192f;
+            --text-color: #e6f1ff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color);
+        }
+
+        .button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 247, 255, 0.2);
+        }
+
+        /* 图片容器样式 */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .image-container .image.main {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .image-container .image.main img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper" class="container mx-auto p-8">
 
-		<!-- Header -->
-		<header id="header">
-			<h1>Inforamation</h1>
-			<p>Detailed Parameters</p>
-		</header>
+        <!-- Header -->
+        <header id="header" class="text-center mb-16">
+            <h1 class="text-5xl font-bold">Inforamation</h1>
+            <p class="text-lg">Detailed Parameters</p>
+        </header>
 
-		<!-- Main -->
-		<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-			<!-- Content -->
-			<section id="content" class="main">
-				<div class="image-container">
-					<span class="image main"><img src="images/pic10.jpg" alt="" /></span>
-					<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-				</div>
-				<h2>TT Two-axis Motor</h2>
-				<p>
-					Applicable voltage: 6V - 9V |
-					Deceleration ratio: 1:90 |
-					Reference speed: Approximately 150 revolutions per minute (6V)
-				</p>
+            <!-- Content -->
+            <section id="content" class="main">
+                <div class="image-container">
+                    <span class="image main"><img src="images/pic10.jpg" alt="" /></span>
+                    <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">TT Two-axis Motor</h2>
+                    <p class="text-lg">
+                        Applicable voltage: 6V - 9V |
+                        Deceleration ratio: 1:90 |
+                        Reference speed: Approximately 150 revolutions per minute (6V)
+                    </p>
+                </div>
 
-				<div class="image-container">
-					<span class="image main"><img src="images/pic12.jpg" alt="" /></span>
-					<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-				</div>
-				<h2>60mm Mecanum Wheel</h2>
-				<p>
-					Hub material: ABS plastic |
-					Connection holes: 6.8mm hexagonal holes on opposite sides |
-					Supported motors: N20/TT/310/370/520 motors
-				</p>
+                <div class="image-container">
+                    <span class="image main"><img src="images/pic12.jpg" alt="" /></span>
+                    <span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">60mm Mecanum Wheel</h2>
+                    <p class="text-lg">
+                        Hub material: ABS plastic |
+                        Connection holes: 6.8mm hexagonal holes on opposite sides |
+                        Supported motors: N20/TT/310/370/520 motors
+                    </p>
+                </div>
 
-				<div class="image-container">
-					<span class="image main"><img src="images/pic14.jpg" alt="" /></span>
-				</div>
-				<h2>Arduino Mega 2560 Board</h2>
-				<p>
-					Analog Input Pins: 16 | Operating Voltage: 5V | Clock Speed: 16MHz | Static Memory: 8KB | EEPROM: 4KB | DC Current per I/O Pin: 40mA | Output Voltage: 5V DC and 3.3V DC | Digital I/O Pins: 54 (15 pins with PWM output) | Flash Memory: 256KB (8KB reserved for the program)
-				</p>
-			</section>
+                <div class="image-container">
+                    <span class="image main"><img src="images/pic14.jpg" alt="" /></span>
+                </div>
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-2">Arduino Mega 2560 Board</h2>
+                    <p class="text-lg">
+                        Analog Input Pins: 16 | Operating Voltage: 5V | Clock Speed: 16MHz | Static Memory: 8KB | EEPROM: 4KB | DC Current per I/O Pin: 40mA | Output Voltage: 5V DC and 3.3V DC | Digital I/O Pins: 54 (15 pins with PWM output) | Flash Memory: 256KB (8KB reserved for the program)
+                    </p>
+                </div>
+            </section>
 
-		</div>
-		<!-- Footer -->
-		<footer id="footer">
-			<section>
-				<ul class="actions">
-					<li><a href="index.html" class="button">Back</a></li>
-				</ul>
-			</section>
+        </div>
+        <!-- Footer -->
+        <footer id="footer" class="mt-16">
+            <section>
+                <ul class="actions">
+                    <li><a href="index.html" class="button py-3 px-6 rounded-md text-lg">Back</a></li>
+                </ul>
+            </section>
+        </footer>
 
-	</div>
+    </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
-</html>
+
+</html>    
