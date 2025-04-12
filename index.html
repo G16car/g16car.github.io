@@ -61,6 +61,22 @@
         nav ul li a:hover {
             color: var(--primary-color);
         }
+
+        /* 导航栏固定在顶部 */
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--bg-color);
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        /* 为了避免内容被导航栏遮挡 */
+        #main {
+            padding-top: 80px;
+        }
     </style>
 </head>
 
@@ -77,7 +93,7 @@
         </header>
 
         <!-- Nav -->
-        <nav id="nav" class="flex justify-center mb-16">
+        <nav id="nav" class="flex justify-center">
             <ul class="flex space-x-8">
                 <li><a href="#intro" class="active text-lg">Company Introduction</a></li>
                 <li><a href="#first" class="text-lg">Body Structure</a></li>
@@ -107,7 +123,7 @@
                             <li><a href="sub1.html" class="button py-3 px-6 rounded-md text-lg">Learn More</a></li>
                         </ul>
                     </div>
-                    <span class="image flex-1"><img src="https://picsum.photos/800/600" alt="" class="rounded-md shadow-md"></span>
+                    <span class="image flex-1"><img src="images/pic01.png" alt="" class="rounded-md shadow-md"></span>
                 </div>
             </section>
 
@@ -116,16 +132,10 @@
                 <header class="major mb-8">
                     <h2 class="text-4xl font-bold">Body Structure</h2>
                 </header>
-                <div class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-                    <video width="640" height="360" controls class="mb-6 md:mb-0">
-                        <source src="your-video-file.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <video width="640" height="360" controls class="mb-6 md:mb-0">
-                        <source src="your-second-video-file.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <video width="640" height="360" controls class="mb-6">
+                    <source src="images/intelligence car.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <ul class="features grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                     <li class="bg-gray-800 p-8 rounded-lg shadow-sm card">
                         <span class="icon solid major style1 block mb-4 text-center">
